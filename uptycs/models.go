@@ -58,14 +58,14 @@ type EventRule struct {
 type BuilderConfigFilter struct {
 	And             []BuilderConfigFilter `json:"and,omitempty"`
 	Or              []BuilderConfigFilter `json:"or,omitempty"`
-	Not             bool                  `json:"not"`
+	Not             bool                  `json:"not,omitempty"`
 	Name            string                `json:"name,omitempty"`
 	Value           ArrayOrString         `json:"value,omitempty"`
 	Operator        string                `json:"operator,omitempty"`
-	IsDate          bool                  `json:"isDate"`
-	IsVersion       bool                  `json:"isVersion"`
-	IsWordMatch     bool                  `json:"isWordMatch"`
-	CaseInsensitive bool                  `json:"caseInsensitive"`
+	IsDate          bool                  `json:"isDate,omitempty"`
+	IsVersion       bool                  `json:"isVersion,omitempty"`
+	IsWordMatch     bool                  `json:"isWordMatch,omitempty"`
+	CaseInsensitive bool                  `json:"caseInsensitive,omitempty"`
 }
 
 type ArrayOrString []string
